@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(useragent.express());
 
-var api="/api/whoami";
-app.get(api,function(req,res,next){
+
+app.get("*",function(req,res,next){
 	var language=req.acceptsLanguages();
 	// var software=req.get('User-Agent');
 	// var software=req.useragent;
